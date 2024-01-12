@@ -1,33 +1,35 @@
 # Clone TabNews
 
-Este projeto é um clone do TabNews, desenvolvido com base no curso "curso.dev" ministrado por Filipe Deschamps.
+This project is a clone of TabNews, developed based on the "curso.dev" course taught by Filipe Deschamps.
 
-## Índice
+## Table of Contents
 
-- [Descrição](#descrição)
-- [Requisitos](#requisitos)
-- [Instalação](#instalação)
-- [Uso](#uso)
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
 
-## Descrição
+## Description
 
-O Clone TabNews é um projeto que replicou a funcionalidade do TabNews, ensinada no curso "curso.dev" do Filipe Deschamps. O objetivo deste repositório é demonstrar a minha jornada de estudos junto com esse projeto muito massa.
+The Clone TabNews is a project that replicates the functionality of TabNews, taught in the "curso.dev" course by Filipe Deschamps. The goal of this repository is to showcase my learning journey alongside this awesome project.
 
-## Requisitos
+## Requirements
 
-Para executar este projeto em seu ambiente local, certifique-se de ter os seguintes requisitos:
+To run this project in your local environment, make sure you have the following requirements:
 
-- [Node.js](https://nodejs.org/) instalado
-- [Git](https://git-scm.com/) instalado
-- Um navegador web moderno
+- [Node.js](https://nodejs.org/) installed
+- [Git](https://git-scm.com/) installed
+- A modern web browser
 
-## Instalação
+## Installation
 
-Siga estas etapas para configurar o projeto em seu ambiente:
+Follow these steps to set up the project in your environment:
 
-1. Clone este repositório:
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/sondercs/clone-tabnews.git
    cd clone-tabnews
    ```
+   
+   <!-- Additional steps for setting up and running the project can be added here as needed. -->
