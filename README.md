@@ -28,7 +28,7 @@ Follow these steps to set up the project in your environment:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/sondercs/clone-tabnews.git
+   git clone https://github.com/jphalexandrino/clone-tabnews.git
    cd clone-tabnews
    ```
    
