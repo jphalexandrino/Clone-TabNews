@@ -31,5 +31,5 @@ Follow these steps to set up the project in your environment:
    git clone https://github.com/jphalexandrino/clone-tabnews.git
    cd clone-tabnews
    ```
-   
+
    <!-- Additional steps for setting up and running the project can be added here as needed. -->
