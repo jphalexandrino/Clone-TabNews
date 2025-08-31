@@ -1,4 +1,4 @@
-import './status/Styles.css';
+import "./status/Styles.css";
 
 // ...existing code...
 

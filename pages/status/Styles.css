@@ -1,8 +1,11 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -12,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,10 +37,12 @@ body {
   background: #23272f;
   border-radius: 16px;
   padding: 40px 28px 32px 28px;
-  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+  box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.18);
   border: 1.5px solid #2d3748;
   margin: 0 auto;
-  transition: box-shadow 0.2s, background 0.2s;
+  transition:
+    box-shadow 0.2s,
+    background 0.2s;
 }
 
 .status-title {
@@ -82,9 +87,12 @@ body {
   background: #18181b;
   border-radius: 12px;
   padding: 18px 14px 16px 14px;
-  box-shadow: 0 2px 8px 0 rgba(30,41,59,0.10);
+  box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.1);
   border: 1.5px solid #23272f;
-  transition: transform 0.16s, box-shadow 0.16s, border 0.16s;
+  transition:
+    transform 0.16s,
+    box-shadow 0.16s,
+    border 0.16s;
   font-size: 1.05rem;
   font-weight: 500;
   color: #e0e7ef;
@@ -117,7 +125,7 @@ body {
 
 .status-box:hover {
   transform: translateY(-2px) scale(1.015);
-  box-shadow: 0 6px 24px 0 rgba(56,189,248,0.10);
+  box-shadow: 0 6px 24px 0 rgba(56, 189, 248, 0.1);
   border: 1.5px solid #38bdf8;
   background: #23272f;
 }

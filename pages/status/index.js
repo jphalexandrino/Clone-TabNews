@@ -11,7 +11,6 @@ export default function StatusPage() {
   return (
     <div className="status-container">
       <div className="status-card">
-
         {/* Título */}
         <h1 className="status-title">📊 Status Page</h1>
 
@@ -47,8 +46,6 @@ export default function StatusPage() {
   );
 }
 
-
-
 // Última vez atualizado:
 function UpdatedAt() {
   const response = useSWR("/api/v1/status", fetchAPI, {
@@ -58,9 +55,7 @@ function UpdatedAt() {
   let UpdatedAtText = "Carregando...";
 
   if (response.data) {
-    UpdatedAtText = new Date(response.data.updated_at).toLocaleString(
-      "pt-BR",
-    );
+    UpdatedAtText = new Date(response.data.updated_at).toLocaleString("pt-BR");
     if (response.error) {
       UpdatedAtText = "Erro ao carregar";
     }
@@ -68,7 +63,6 @@ function UpdatedAt() {
 
   return <div>Última atualização: {UpdatedAtText}</div>;
 }
-
 
 // Máximo de conexões:
 function MaxConnections() {
@@ -97,7 +91,8 @@ function OpenedConnections() {
   let OpenedConnectionsText = "Carregando...";
 
   if (response.data) {
-    OpenedConnectionsText = response.data.dependencies.database.opened_connections;
+    OpenedConnectionsText =
+      response.data.dependencies.database.opened_connections;
     if (response.error) {
       OpenedConnectionsText = "Erro ao carregar";
     }
@@ -148,7 +143,9 @@ function DbVersion() {
 
 // Tempo de atividade do banco de dados (Uptime) - opcional
 function DbUptime() {
-  const response = useSWR("/api/v1/status", fetchAPI, { refreshInterval: 2000 });
+  const response = useSWR("/api/v1/status", fetchAPI, {
+    refreshInterval: 2000,
+  });
   let uptime = "Carregando...";
   if (response.data) {
     uptime = response.data.dependencies.database.uptime; // ajuste conforme o campo real

@@ -33,12 +33,12 @@ async function status(request, response) {
   function formatPgInterval(interval) {
     if (!interval) return "-";
     // Se for objeto (pg retorna { days, hours, minutes, seconds, ... })
-    if (typeof interval === 'object') {
+    if (typeof interval === "object") {
       const days = interval.days || 0;
       const hours = interval.hours || 0;
       const minutes = interval.minutes || 0;
       let result = [];
-      if (days > 0) result.push(`${days} dia${days > 1 ? 's' : ''}`);
+      if (days > 0) result.push(`${days} dia${days > 1 ? "s" : ""}`);
       if (hours > 0) result.push(`${hours}h`);
       if (minutes > 0) result.push(`${minutes}min`);
       if (result.length === 0) result.push("<1min");
