@@ -6,3 +6,4 @@ desktop.ini
 .flaskenv*
 !.env.project
 !.env.vault
+.idea

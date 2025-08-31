@@ -1,0 +1,241 @@
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #18181b 0%, #23272f 100%);
+  color: #e5e7eb;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.status-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  background: transparent;
+  overflow: auto;
+}
+
+.status-card {
+  width: 100%;
+  max-width: 540px;
+  min-width: 0;
+  background: #23272f;
+  border-radius: 16px;
+  padding: 40px 28px 32px 28px;
+  box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.18);
+  border: 1.5px solid #2d3748;
+  margin: 0 auto;
+  transition:
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.status-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #60a5fa;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #1e293b33;
+}
+
+.status-updated {
+  text-align: center;
+  font-size: 1rem;
+  color: #a1a1aa;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.status-section {
+  margin-bottom: 28px;
+}
+
+.status-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  border-bottom: 1.5px solid #334155;
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.status-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.status-box {
+  background: #18181b;
+  border-radius: 12px;
+  padding: 18px 14px 16px 14px;
+  box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.1);
+  border: 1.5px solid #23272f;
+  transition:
+    transform 0.16s,
+    box-shadow 0.16s,
+    border 0.16s;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e0e7ef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.status-box::before {
+  content: attr(data-status-icon);
+  font-size: 1.3em;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.status-box[data-status="ok"] {
+  border-left: 4px solid #22c55e;
+}
+.status-box[data-status="warning"] {
+  border-left: 4px solid #eab308;
+}
+.status-box[data-status="error"] {
+  border-left: 4px solid #ef4444;
+}
+.status-box[data-status="info"] {
+  border-left: 4px solid #38bdf8;
+}
+
+.status-box:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 6px 24px 0 rgba(56, 189, 248, 0.1);
+  border: 1.5px solid #38bdf8;
+  background: #23272f;
+}
+
+.status-box.full {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.status-box.full::before {
+  display: inline-block;
+  margin: 0 8px 0 0;
+  font-size: 1.3em;
+  line-height: 1;
+}
+
+.status-box.full .db-version-content,
+.status-box.full .db-uptime-content {
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.db-version-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.db-version-label {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+.db-version-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #e0e7ef;
+  background: #23272f;
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.db-version-error {
+  font-size: 1.08rem;
+  color: #ef4444;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.db-version-loading {
+  font-size: 1.08rem;
+  color: #a1a1aa;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+@media (min-width: 600px) {
+  .status-card {
+    max-width: 700px;
+    padding: 48px 40px 36px 40px;
+  }
+  .status-title {
+    font-size: 2.5rem;
+  }
+  .status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .status-card {
+    max-width: 900px;
+    padding: 56px 56px 44px 56px;
+  }
+  .status-title {
+    font-size: 2.8rem;
+  }
+  .status-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .status-card {
+    padding: 14px 2px 10px 2px;
+    border-radius: 10px;
+  }
+  .status-title {
+    font-size: 1.3rem;
+  }
+  .status-section-title {
+    font-size: 0.98rem;
+  }
+  .status-updated {
+    font-size: 0.92rem;
+  }
+  .status-box {
+    padding: 10px 4px 8px 4px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+}
